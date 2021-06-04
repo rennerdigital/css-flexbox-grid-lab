@@ -1,0 +1,47 @@
+* {
+    /* height & width now includes border & padding */
+    box-sizing: border-box;
+  }
+ 
+
+body {
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 1 fr 4 fr;
+    grid-template-rows: 1 fr 1 fr 1 fr;
+    grid-gap: 10px;
+    grid-template-areas: 
+    ". upper"
+    "nav middle"
+    ". lower";
+};
+
+.upper {
+    grid-area: upper;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.mid {
+    grid-area: mid;
+    display: flex;
+    grid-gap: 10px;
+}
+
+.lower {
+    grid-area: lower;
+    display: flex;
+    grid-gap: 10px;
+}
+
+.mid > img {
+    width: 250px;
+    height: 300px;
+}
+
+.upper > img {
+    width: 500px;
+    height: 300px;
+}
